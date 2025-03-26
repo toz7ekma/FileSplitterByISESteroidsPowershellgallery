@@ -66,4 +66,28 @@ Join-File -Path 'C:\test.zip' -DeletePartFiles
 
 ## License
 (c) 2019 Tobias. All rights reserved.
+```md
+## Using the Module Locally
+
+If you prefer to use the module without installing it via `Import-Module`, you can run the source code directly. This is useful for testing or development purposes.
+
+### Steps to Use Locally
+1. Navigate to the directory containing the module's source files:
+    ```powershell
+    cd C:\Users\User\Desktop\FileSplitterByISESteroidsPowershellgallery\src
+    ```
+
+2. Dot-source the `loader.psm1` file to load the module's functions into your current session:
+    ```powershell
+    . .\loader.psm1
+    ```
+
+3. Use the commands `Split-File` and `Join-File` as needed:
+    ```powershell
+    # Example: Split a file into parts
+    Split-File -Path 'C:\test.zip' -PartSizeBytes 2.5MB
+
+    # Example: Join parts to recreate the original file
+    Join-File -Path 'C:\test.zip'
+    ```
 ```
